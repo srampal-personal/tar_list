@@ -27,6 +27,7 @@
 #include <time.h>
 
 #define TAR_HDR_SIZE  ((unsigned int) 512)
+#define MMAP_LENGTH   ((unsigned int) 10000000000)
 
 /* Posix tar header format */
 struct tarhdr {
@@ -84,7 +85,7 @@ int main(int argc, char **argv){
   }
 
   /* Using memory mapped file I/O */ 
-  tar=mmap(NULL, 808960, PROT_READ, MAP_PRIVATE, fd, 0);
+  tar=mmap(NULL, MMAP_LENGTH, PROT_READ, MAP_PRIVATE, fd, 0);
 
   if (tar == MAP_FAILED) {
       fprintf(stderr, "Memory error mapping file exitting ...\n");
