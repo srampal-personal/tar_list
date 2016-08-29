@@ -1,5 +1,5 @@
 # tar_list
-Exercise in C programming. List files and timestamps within a [unix tar archive][1] without using standard utilities like 'tar'
+Exercise in C programming. List files and timestamps within a *[unix tar archive][1]* without using standard utilities like 'tar'
 
 ### Repo contents
 
@@ -32,11 +32,11 @@ Exercise in C programming. List files and timestamps within a [unix tar archive]
     
 * tar_list_unit_tests:
  
-    Linux 64b x86 executable binary unit test harness. Example usage
+    Linux 64b x86 executable binary unit test harness. Example usage and output:
 
-user@ubuntu:~/tar_list$ ./tar_list_unit_tests  
+    *user@ubuntu:~/tar_list$ ./tar_list_unit_tests  
 All Tests Passed  
-Tests run: 3
+Tests run: 3*
 
 * unit_tests:
  

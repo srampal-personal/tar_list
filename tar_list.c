@@ -1,8 +1,8 @@
-/*
+/*******
     tar_list.c: Utility to list out all files/ directories contained within a standard 
     Unix/posix tar archive alongwith the timestamps when last modified. 
 
-    Compiled and tested using gcc on ubuntu 14.04 and a .tar file
+    Compiled and tested using gcc on ubuntu 14.04 on 64b x86
        Example:  gcc tar_list.c -o tar_list
     Compiled and tested using cc on ubuntu 14.04
        Example:  cc tar_list.c -o tar_list
@@ -14,7 +14,9 @@
     compressed archives
 
     Warns if file name does not end with ".tar" but proceeds anyway
-*/
+
+    See also: tar_list_unit_tests.c which contains unit tests and test harness for this utility
+********/
 
 
 #include <stdio.h> 
