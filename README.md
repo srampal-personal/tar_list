@@ -35,8 +35,8 @@ Exercise in C programming. List files and timestamps within a *[unix tar archive
     Linux 64b x86 executable binary unit test harness. Example usage and output:
 
     *user@ubuntu:~/tar_list$ ./tar_list_unit_tests  
-All Tests Passed  
-Tests run: 3*
+    All Tests Passed  
+    Tests run: 3*
 
 * unit_tests:
  
