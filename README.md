@@ -9,11 +9,14 @@ Exercise in C programming. List files and timestamps within a *[unix tar archive
     Unix/posix tar archive alongwith the timestamps when last modified. 
 
     Compiled and tested using gcc and cc  on ubuntu 14.04 and a .tar file
+
        Example:  gcc tar_list.c -o tar_list
+
        Example:  cc tar_list.c -o tar_list
+
     Should work with most ANSI C compilers
 
-    Usage: ./tar_list <tar_file>
+    Usage: ./tar_list *tar_file*
 
     Can be used with a .tar file, will not work with other archive file types including 
     compressed archives
