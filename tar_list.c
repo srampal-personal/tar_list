@@ -23,11 +23,11 @@
 #include <fcntl.h> 
 #include <string.h> 
 #include <sys/mman.h> 
+#include <sys/stat.h> 
 #include <stdlib.h>
 #include <time.h>
 
 #define TAR_HDR_SIZE  ((unsigned int) 512)
-#define MMAP_LENGTH   ((unsigned int) 10000000000)
 
 /* Posix tar header format */
 struct tarhdr {
@@ -64,6 +64,9 @@ unsigned file_extension_check(char *input_file)
 
 int main(int argc, char **argv){
   
+  struct stat st;
+  unsigned filesize;
+
   if (argc < 2) {
       printf("Usage: tar_list <tarfile>\n");
       exit(0);
@@ -76,6 +79,10 @@ int main(int argc, char **argv){
       exit(-1);
   }
 
+
+  stat(argv[1], &st);
+  filesize = st.st_size;
+
   /* Put out a warning if file name does not end with .tar but proceed anyway */
   /* (could potentially add more tar format sanity checks for robustness) */
 
@@ -85,7 +92,7 @@ int main(int argc, char **argv){
   }
 
   /* Using memory mapped file I/O */ 
-  tar=mmap(NULL, MMAP_LENGTH, PROT_READ, MAP_PRIVATE, fd, 0);
+  tar=mmap(NULL, filesize, PROT_READ, MAP_PRIVATE, fd, 0);
 
   if (tar == MAP_FAILED) {
       fprintf(stderr, "Memory error mapping file exitting ...\n");
