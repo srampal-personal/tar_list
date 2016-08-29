@@ -8,6 +8,8 @@
        Example:  cc tar_list.c -o tar_list
     Should work with most ANSI C compilers
 
+    Usage: ./tar_list <tar_file>
+
     Can be used with a .tar file, will not work with other archive file types including 
     compressed archives
 
