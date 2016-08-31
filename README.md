@@ -1,5 +1,5 @@
 # tar_list
-Exercise in C programming. List files and timestamps within a *[unix tar archive][1]* without using standard utilities like 'tar'
+Exercise in C & Go programming. List files and timestamps within a *[unix tar archive][1]* without using standard utilities like 'tar'
 
 ### Repo contents
 
@@ -44,6 +44,10 @@ Exercise in C programming. List files and timestamps within a *[unix tar archive
 * unit_tests:
  
     Directory containing supporting files for unit tests
+ 
+* tar_list_go.go:
+
+    go version of the same utility. Minor differences compared to the .c version above but otherwise functionally similar. My first go program (hence not 100% perfectly written). Tested using go1.6.1 linux/amd64. Sample usage *go run ./tar_list_go.go ./unit_tests/a.tar* 
  
 
  [1]: https://en.wikipedia.org/wiki/Tar_%28computing%29 
